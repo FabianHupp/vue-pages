@@ -13,50 +13,42 @@ const routes = [
   {
     path: "/about",
     name: "About",
-    component: () =>
-      import("../views/About.vue"),
+    component: () => import("../views/About.vue"),
   },
   {
     path: "/galerie",
     name: "Galerie",
-    component: () =>
-      import("../views/Galerie.vue"),
+    component: () => import("../views/Galerie.vue"),
   },
   {
     path: "/datenschutz",
     name: "Datenschutz",
-    component: () =>
-      import("../views/Datenschutz.vue"),
+    component: () => import("../views/Datenschutz.vue"),
   },
   {
     path: "/downloads",
     name: "Downloads",
-    component: () =>
-      import("../views/Downloads.vue"),
+    component: () => import("../views/Downloads.vue"),
   },
   {
     path: "/impressum",
     name: "Impressum",
-    component: () =>
-      import("../views/Impressum.vue"),
+    component: () => import("../views/Impressum.vue"),
   },
   {
     path: "/kontakt",
     name: "Kontakt",
-    component: () =>
-      import("../views/Kontakt.vue"),
+    component: () => import("../views/Kontakt.vue"),
   },
   {
     path: "/mannschaften",
     name: "Mannschaften",
-    component: () =>
-      import("../views/Mannschaften.vue"),
+    component: () => import("../views/Mannschaften.vue"),
   },
   {
     path: "/training",
     name: "Training",
-    component: () =>
-      import("../views/Training.vue"),
+    component: () => import("../views/Training.vue"),
   },
 ];
 

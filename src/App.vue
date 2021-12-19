@@ -1,26 +1,26 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
-
 <style langs="scss">
-  @import 'https://unpkg.com/aos@next/dist/aos.css';
+@import "https://unpkg.com/aos@next/dist/aos.css";
 </style>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
   --main-color: #1c1d22;
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  overflow:auto;
-  overflow:initial;
-  scroll-behavior:smooth;
+  overflow: auto;
+  overflow: initial;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -30,7 +30,7 @@ html, body {
 
 #app {
   /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -53,7 +53,7 @@ html, body {
 
 .orange-prime {
   /*background-color: #fb6340;*/
-  background-color: #FB7F3F;  
+  background-color: #fb7f3f;
 }
 
 .purple-secondary {
@@ -73,6 +73,6 @@ html, body {
 }
 
 .fourth {
-  background-color: #213C4B;
+  background-color: #213c4b;
 }
 </style>
