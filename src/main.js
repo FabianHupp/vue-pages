@@ -9,6 +9,10 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 
+/*import VueAwesomeSwiper from 'vue-awesome-swiper';
+import "swiper/css/swiper.css";
+Vue.use(VueAwesomeSwiper, /* { default options with global component } *//*)*/
+
 import VCalendar from "v-calendar";
 Vue.use(VCalendar);
 

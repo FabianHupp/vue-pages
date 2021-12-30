@@ -16,7 +16,7 @@
         <!-- Beschreibung und BVS Link -->
         <b-container>
           <b-row class="justify-content-center">
-            <h3 class="primetext">Spielpläne</h3>
+            <h3 class="heading-font">Spielpläne</h3>
             <p class="py-2 p-font"> Spielpläne und Statistiken können auch auf der BVS Website eingesehen werden. </p>
             <custom-button
               text="Spielpläne BVS"
@@ -29,36 +29,10 @@
         </b-container>
 
         <!-- Spielpläne Widgets -->
-        <b-card class="shadow rounded border-0 mt-5">
+        <b-card v-for="(plan, index) in spielplaene" :key="index" class="shadow rounded border-0 mt-5">
           <div class="spielplan">
             <div class="spielplan-inner">
-              <iframe
-                class="spielplan-frame"
-                src="https://www.basketball-bund.net/widget/widgets/index2.html#!/mannschaftswidget/mannschaft/163417/params/%7B%22iframeWidth%22:300,%22iframeHeight%22:450,%22showRefreshButton%22:false,%22titleColor%22:%22F0EDEB%22,%22titleBgColor%22:%22F0EDEB%22,%22tapColor%22:%22FFFFFF%22,%22tapBgColor%22:%22FB7F3F%22,%22colorMatchGroup%22:%22FFFFFF%22,%22bgColorMatchGroup%22:%2201324C%22,%22colorMatchListItem%22:%22000000%22,%22bgColorMatchListItem%22:%22FFFFFF%22,%22showKuerzelInSpiele%22:false,%22mannschaftsId%22:%22162082%22%7D"
-              >
-              </iframe>
-            </div>
-          </div>
-        </b-card>
-        <b-card class="shadow rounded border-0 mt-5">
-          <div class="spielplan">
-            <div class="spielplan-inner">
-              <iframe
-                class="spielplan-frame"
-                src="https://www.basketball-bund.net/widget/widgets/index2.html#!/mannschaftswidget/mannschaft/163417/params/%7B%22iframeWidth%22:300,%22iframeHeight%22:450,%22showRefreshButton%22:false,%22titleColor%22:%22F0EDEB%22,%22titleBgColor%22:%22F0EDEB%22,%22tapColor%22:%22FFFFFF%22,%22tapBgColor%22:%22FB7F3F%22,%22colorMatchGroup%22:%22FFFFFF%22,%22bgColorMatchGroup%22:%2201324C%22,%22colorMatchListItem%22:%22000000%22,%22bgColorMatchListItem%22:%22FFFFFF%22,%22showKuerzelInSpiele%22:false,%22mannschaftsId%22:%22163409%22%7D"
-              >
-              </iframe>
-            </div>
-          </div>
-        </b-card>
-        <b-card class="shadow rounded border-0 mt-5">
-          <div class="spielplan">
-            <div class="spielplan-inner">
-              <iframe
-                class="spielplan-frame"
-                src="https://www.basketball-bund.net/widget/widgets/index2.html#!/mannschaftswidget/mannschaft/163417/params/%7B%22iframeWidth%22:300,%22iframeHeight%22:450,%22showRefreshButton%22:false,%22titleColor%22:%22F0EDEB%22,%22titleBgColor%22:%22F0EDEB%22,%22tapColor%22:%22FFFFFF%22,%22tapBgColor%22:%22FB7F3F%22,%22colorMatchGroup%22:%22FFFFFF%22,%22bgColorMatchGroup%22:%2201324C%22,%22colorMatchListItem%22:%22000000%22,%22bgColorMatchListItem%22:%22FFFFFF%22,%22showKuerzelInSpiele%22:false,%22mannschaftsId%22:%22163417%22%7D"
-              >
-              </iframe>
+              <iframe class="spielplan-frame" :src="plan.source"></iframe>
             </div>
           </div>
         </b-card>
@@ -91,8 +65,8 @@
 
           <!-- Beschreibung und Legende -->
           <b-col md="6" class="p-4 pb-5 pt-4">
-            <h3 class="primetext t-left">Vereinstermine</h3>
-            <p class="py-2 px-0 p-font t-left"> Bevorstehende Veranstaltungen für Hauptverein, Abteilung, BVS und Lehrgänge. </p>
+            <h3 class="heading-font text-left">Vereinstermine</h3>
+            <p class="py-2 px-0 p-font text-left"> Bevorstehende Veranstaltungen für Hauptverein, Abteilung, BVS und Lehrgänge. </p>
             <b-row class="m-0 p-0 pt-1">
               <b-col cols="auto">
                 <legende-item color="secondary-color" label="Abteilung"></legende-item>
@@ -110,7 +84,7 @@
           <b-col md="6">
             <v-calendar
               class="shadow rounded border-0 calendar"
-              :attributes="attributes"
+              :attributes="formattedTermine"
             ></v-calendar>
           </b-col>
 
@@ -176,26 +150,20 @@ export default {
       },
     ];
 
-    const headerImages = [
-      {
-        title: "title 1",
-        description: "des 1",
-        src: "require('../assets/Images/title.jpg')",
-      },
-      {
-        title: "title 2",
-        description: "des 2",
-        href: "https://www.exapleimages.com/second.jpg",
-      },
+    const spielplaene = [
+      { source: "https://www.basketball-bund.net/widget/widgets/index2.html#!/mannschaftswidget/mannschaft/163417/params/%7B%22iframeWidth%22:300,%22iframeHeight%22:450,%22showRefreshButton%22:false,%22titleColor%22:%22F0EDEB%22,%22titleBgColor%22:%22F0EDEB%22,%22tapColor%22:%22FFFFFF%22,%22tapBgColor%22:%22FB7F3F%22,%22colorMatchGroup%22:%22FFFFFF%22,%22bgColorMatchGroup%22:%2201324C%22,%22colorMatchListItem%22:%22000000%22,%22bgColorMatchListItem%22:%22FFFFFF%22,%22showKuerzelInSpiele%22:false,%22mannschaftsId%22:%22162082%22%7D"},
+      { source: "https://www.basketball-bund.net/widget/widgets/index2.html#!/mannschaftswidget/mannschaft/163417/params/%7B%22iframeWidth%22:300,%22iframeHeight%22:450,%22showRefreshButton%22:false,%22titleColor%22:%22F0EDEB%22,%22titleBgColor%22:%22F0EDEB%22,%22tapColor%22:%22FFFFFF%22,%22tapBgColor%22:%22FB7F3F%22,%22colorMatchGroup%22:%22FFFFFF%22,%22bgColorMatchGroup%22:%2201324C%22,%22colorMatchListItem%22:%22000000%22,%22bgColorMatchListItem%22:%22FFFFFF%22,%22showKuerzelInSpiele%22:false,%22mannschaftsId%22:%22163409%22%7D"},
+      { source: "https://www.basketball-bund.net/widget/widgets/index2.html#!/mannschaftswidget/mannschaft/163417/params/%7B%22iframeWidth%22:300,%22iframeHeight%22:450,%22showRefreshButton%22:false,%22titleColor%22:%22F0EDEB%22,%22titleBgColor%22:%22F0EDEB%22,%22tapColor%22:%22FFFFFF%22,%22tapBgColor%22:%22FB7F3F%22,%22colorMatchGroup%22:%22FFFFFF%22,%22bgColorMatchGroup%22:%2201324C%22,%22colorMatchListItem%22:%22000000%22,%22bgColorMatchListItem%22:%22FFFFFF%22,%22showKuerzelInSpiele%22:false,%22mannschaftsId%22:%22163417%22%7D"}
     ];
 
     return {
       termine,
-      headerImages,
+      spielplaene
     };
   },
   computed: {
-    attributes() {
+    /* Termine in für v-calendar lesbares format konvertieren */
+    formattedTermine() {
       return [
         ...this.termine.map((termin) => ({
           dates: termin.dates,
@@ -213,15 +181,7 @@ export default {
         })),
       ];
     },
-  },
-  methods: {
-    onOver() {
-      this.$refs.dropdown.visible = true;
-    },
-    onLeave() {
-      this.$refs.dropdown.visible = false;
-    },
-  },
+  }
 };
 </script>
 
@@ -233,43 +193,6 @@ export default {
   top: 56px;
   margin: 0 0 0 0;
   padding: 0;
-}
-
-.filter {
-  background-color: #000;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 2;
-}
-
-.bottom-section {
-  padding-bottom: -20px;
-}
-
-.logo-text {
-  font-weight: 800;
-}
-
-.purple-circle {
-  background-color: #fffeee;
-}
-
-.top-margin {
-  margin-top: 57px;
-}
-
-.white-font * {
-  color: #fff !important;
-}
-
-.whit-font * {
-  color: #fff !important;
-}
-
-.logo-color {
-  color: #fb7f3f !important;
 }
 
 .spielplan {
@@ -289,33 +212,6 @@ export default {
   min-height: 452px !important;
   border: 1px solid #eee;
   overflow: hidden;
-}
-
-.primetext {
-  color: #32325d !important;
-}
-
-.white-font {
-  color: #fff;
-}
-
-.t-left {
-  text-align: left;
-}
-
-.circle {
-  border-radius: 20px;
-  height: 20px;
-  width: 20px;
-  margin: 5px 5px 5px 5px;
-}
-
-.section-icon {
-  height: 24px;
-  width: 24px;
-  padding: 1px 0 0 0;
-  position: relative;
-  margin: 0;
 }
 
 .calendar {

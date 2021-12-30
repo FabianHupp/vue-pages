@@ -16,7 +16,7 @@
 .header {
   position: relative;
   height: calc(59vh - 56px);
-  background: rgba(1, 50, 76, 0.45);
+  background: rgba(1, 50, 76, 0.35);
   overflow: hidden;
 }
 

@@ -13,6 +13,7 @@
   --secondaryColor: #01324c;
   --greySectionColor: #f4f5f7;
   --pTextColor: #525f7f;
+  --headingTextColor: #32325d;
 
   /* footer colors */
   --footerTextColor: #8898aa;
@@ -63,6 +64,14 @@ body {
   color: var(--pTextColor) !important;
 }
 
+.heading-font {
+  color: var(--headingTextColor) !important;
+}
+
+.white-font {
+  color: #fff;
+}
+
 /* additional section colors */
 .grey-section-color {
   background-color: var(--greySectionColor);
@@ -77,5 +86,9 @@ body {
 
 .overflow-h {
   overflow: hidden;
+}
+
+.text-left {
+  text-align: left;
 }
 </style>
