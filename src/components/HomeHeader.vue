@@ -1,118 +1,95 @@
 <template>
-  <header class="showcase">
-    <div class="head-container showcase-inner">
-      <b-container>
-        <b-row class="logo-center">
-          <b-img
-            :src="require('../assets/Images/Finished.svg')"
-            class="header-logo"
-          ></b-img>
-          <b-col>
-            <b-row>
-              <h1 class="logo-color logo-heading">SSV Wellesweiler</h1>
-            </b-row>
-            <b-row>
-              <h1 class="purple-secondary-color logo-heading">
-                Abt. Basketball
-              </h1>
-            </b-row>
+  <header class="header center-children">
+      <b-container class="center-children">
+        <b-row class="center-children">
+          <b-img :src="require('../assets/Images/Finished.svg')" class="logo-image"></b-img>
+          <b-col class="logo-text">
+            <b-row> <h1 class="prime-font"> SSV Wellesweiler </h1> </b-row>
+            <b-row> <h1> Abt. Basketball </h1> </b-row>
           </b-col>
         </b-row>
       </b-container>
-    </div>
   </header>
 </template>
 
-<script></script>
-
-<style>
-.header-logo {
-  width: 180px !important; /** 192px */
+<style scoped>
+.header {
   position: relative;
-  top: -9px;
-  right: 2px;
-}
-
-.logo-heading {
-  width: fit-content;
-}
-
-.logo-center {
-  margin: auto;
-  padding: 0 0 0 21rem;
-}
-
-.showcase {
-  background: rgba(1, 50, 76, 0.65);
-  color: #fff;
   height: calc(59vh - 56px);
-  position: relative;
+  background: rgba(1, 50, 76, 0.45);
   overflow: hidden;
 }
 
-.showcase:before {
-  content: "";
-  background: url("https://static.vecteezy.com/system/resources/previews/002/096/660/non_2x/indoor-basketball-court-free-photo.jpg")
-    no-repeat center center/cover;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+.header:before {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
+  content: "";
+  
+  background: url("http://schmid-schulz.de/wordpress/wp-content/uploads/2020/04/sli_Wellesweiler_1380-1380x400.jpg") no-repeat center center/cover; 
+  /*background: url('~@/assets/Images/title2.jpg') no-repeat center center/cover;*/
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  transform: scale(1.05);
 }
 
-.head-container {
-  max-width: 1400px; /**960 */
-  position: relative;
-  top: 22%;
-  max-height: 600px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 0rem;
-}
-
-.showcase .showcase-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  height: 55%;
-}
-
-.showcase h1 {
-  font-size: 54px; /**64px */
+.header h1 {
+  font-size: 54px;
   font-weight: 600;
   line-height: 1.1;
+  position: relative;
 }
 
-.showcase p {
-  font-size: 1.3rem;
+.logo-image {
+  position: relative;
+  width: 180px !important;
 }
 
+.logo-text {
+  position: relative;
+  top: 2px;
+}
+
+.header h1 {
+  width: fit-content;
+  text-align: left;
+  color: #fff;
+}
+
+
+/*   responsive styling   */
 @media screen and (max-width: 1920px) {
-  .showcase {
-    height: calc(60vh - 56px);
+  .header h1 {
+    font-size: 46px;
+  }
+
+  .logo-image {
+    width: 162px !important;
   }
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 991px) {
-  .showcase h1 {
-    font-size: 48px;
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .logo-image {
+    width: 140px !important;
   }
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 767px) {
-  .showcase {
-    height: calc(45vh - 56px);
+  .header h1 {
+    font-size: 30px;
+    right: 1px;
   }
-  .showcase h1 {
-    font-size: 2.5rem;
+
+  .logo-image {
+    width: 122px !important;
+    left: 5px;
   }
 }
 </style>

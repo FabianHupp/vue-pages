@@ -4,15 +4,16 @@
   </div>
 </template>
 
-<style langs="scss">
-@import "https://unpkg.com/aos@next/dist/aos.css";
-</style>
-
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --main-color: #1c1d22;
+  --primaryColor: #fb7f3f;
+  --secondaryColor: #01324c;
+  --greySectionColor: #f4f5f7;
+
+  --footerTextColor: #8898aa;
+  --footerTextHoverColor: #525f7f;
 }
 
 html,
@@ -23,56 +24,44 @@ body {
   scroll-behavior: smooth;
 }
 
+#app {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#app {
-  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  /*color: #2c3e50;*/
-  height: 100%;
+/*   main color classes   */
+.prime-color {
+  background-color: var(--primaryColor) !important;
 }
 
-#nav {
-  padding: 30px;
+.secondary-color {
+  background-color: var(--secondaryColor) !important;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.prime-font {
+  color: var(--primaryColor) !important;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.secondary-font {
+  color: var(--secondaryColor) !important;
 }
 
-.orange-prime {
-  /*background-color: #fb6340;*/
-  background-color: #fb7f3f;
+/*   additional section colors   */
+.grey-section-color {
+  background-color: var(--greySectionColor);
 }
 
-.purple-secondary {
-  background-color: #01324c !important;
-}
-
-.purple-secondary-font {
-  color: #01324c;
-}
-
-.blue-secondary {
-  background-color: #525f7f;
-}
-
-.third {
-  background-color: #404649;
-}
-
-.fourth {
-  background-color: #213c4b;
+/*   often needed classes   */
+.center-children {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

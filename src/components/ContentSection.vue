@@ -1,6 +1,6 @@
 <template>
-  <div class="section" :class="[color, skewed]">
-    <b-container class="section-p-lg" :class="deSkew">
+  <div class="section" :class="color">
+    <b-container>
       <b-row align-h="center">
         <b-col cols="11" md="10">
           <slot></slot>
@@ -12,10 +12,7 @@
 
 <script>
 export default {
-  props: {
-    color: String,
-    skewed: String,
-  }
+  props: { color: String }
 };
 </script>
 
@@ -23,23 +20,6 @@ export default {
 .section {
   position: relative;
   width: 100%;
-}
-
-.section-p-lg {
   padding: 96px 0 96px 0;
-}
-
-.section-b-grey {
-  background-color: #f4f5f7 !important;
-}
-
-.shape-skew {
-  z-index: -1;
-  transform: skewY(-8deg);
-  transform-origin: 0;
-}
-
-.de-skew {
-  transform: skewY(8deg) !important;
 }
 </style>

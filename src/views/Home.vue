@@ -1,11 +1,12 @@
 <template>
   <div class="site">
-    <!-- Top Navigation -->
+
     <navigation></navigation>
 
     <!-- Main Body Content -->
-    <div class="home" ref="screen">
-      <!-- Header -->
+    <div class="home ov-h" ref="screen">
+
+      <!-- Bballer Header -->
       <home-header></home-header>
 
       <!-- Spielpläne -->
@@ -13,14 +14,13 @@
         <b-container>
           <b-row class="justify-content-center">
             <h3 class="primetext">Spielpläne</h3>
-            <p class="py-2 ptext">
-              Spielpläne und Statistiken können auch auf der BVS Website
-              eingesehen werden.
-            </p>
+            <p class="py-2 ptext"> Spielpläne und Statistiken können auch auf der BVS Website eingesehen werden. </p>
             <custom-button
-              btnText="Spielpläne BVS"
-              bgColor="orange-prime"
+              text="Spielpläne BVS"
+              bgColor="prime-color"
               textColor="white-font"
+              icon="clipboard-data"
+              link="https://www.basketball-bund.net/index.jsp?Action=100&Verband=9"
             ></custom-button>
           </b-row>
         </b-container>
@@ -60,30 +60,27 @@
       </content-section>
 
       <!-- Gallerie Teaser -->
-      <content-section color="purple-secondary">
+      <content-section color="secondary-color">
         <gallery-teaser></gallery-teaser>
         <b-container class="mt-5">
           <b-row class="justify-content-center">
-            <p class="py-2 white-font">
-              Weitere Bilder finden Sie in unserer Gallerie.
-            </p>
-            <custom-button
-              btnText="Gallerie"
-              bgColor="orange-prime"
+            <p class="py-2 white-font"> Weitere Bilder finden Sie in unserer Gallerie. </p>
+            <custom-button 
+              text="Gallerie"
+              bgColor="prime-color"
               textColor="white-font"
+              icon="images"
             ></custom-button>
           </b-row>
         </b-container>
       </content-section>
 
-      <content-section color="section-b-grey">
+      <!-- Calendar Section -->
+      <content-section color="grey-section-color">
         <b-row>
           <b-col md="6" class="p-4 pb-5 pt-4">
             <h3 class="primetext t-left">Vereinstermine</h3>
-            <p class="py-2 px-0 ptext t-left">
-              Bevorstehende Veranstaltungen für Hauptverein, Abteilung, BVS und
-              Lehrgänge.
-            </p>
+            <p class="py-2 px-0 ptext t-left"> Bevorstehende Veranstaltungen für Hauptverein, Abteilung, BVS und Lehrgänge. </p>
             <b-row class="m-0 p-0 pt-1">
               <b-col cols="auto">
                 <legende-item color="li-green" label="Abteilung"></legende-item>
@@ -109,7 +106,7 @@
         </b-row>
       </content-section>
 
-      <c-footer color="section-b-grey"></c-footer>
+      <c-footer color="grey-section-color"></c-footer>
     </div>
   </div>
 </template>
@@ -217,6 +214,9 @@ export default {
 </script>
 
 <style>
+.ov-h {
+  overflow: hidden;
+}
 
 .home {
   width: 100%;

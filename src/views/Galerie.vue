@@ -37,7 +37,6 @@ export default {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url(../assets/Images/back.jpg);
 }
 
 .main-content {

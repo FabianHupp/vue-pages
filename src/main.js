@@ -14,16 +14,8 @@ Vue.use(VCalendar);
 
 Vue.config.productionTip = false;
 
-import SequentialEntrance from "vue-sequential-entrance";
-import "vue-sequential-entrance/vue-sequential-entrance.css";
-
-import $ from "jquery";
-
-Vue.use(SequentialEntrance);
-
 new Vue({
   router,
   store,
-  $,
   render: (h) => h(App),
 }).$mount("#app");
