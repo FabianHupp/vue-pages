@@ -82,6 +82,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .header {
+    height: calc(50vh - 56px);
+  }
+
   .header h1 {
     font-size: 30px;
     right: 1px;

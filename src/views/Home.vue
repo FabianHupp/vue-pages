@@ -1,20 +1,23 @@
 <template>
-  <div class="site">
+  <div ref="home">
 
+    <!-- Navigation -->
     <navigation></navigation>
 
     <!-- Main Body Content -->
-    <div class="home ov-h" ref="screen">
+    <div class="home-content overflow-h">
 
       <!-- Bballer Header -->
       <home-header></home-header>
 
       <!-- Spielpläne -->
       <content-section>
+
+        <!-- Beschreibung und BVS Link -->
         <b-container>
           <b-row class="justify-content-center">
             <h3 class="primetext">Spielpläne</h3>
-            <p class="py-2 ptext"> Spielpläne und Statistiken können auch auf der BVS Website eingesehen werden. </p>
+            <p class="py-2 p-font"> Spielpläne und Statistiken können auch auf der BVS Website eingesehen werden. </p>
             <custom-button
               text="Spielpläne BVS"
               bgColor="prime-color"
@@ -24,6 +27,8 @@
             ></custom-button>
           </b-row>
         </b-container>
+
+        <!-- Spielpläne Widgets -->
         <b-card class="shadow rounded border-0 mt-5">
           <div class="spielplan">
             <div class="spielplan-inner">
@@ -57,11 +62,16 @@
             </div>
           </div>
         </b-card>
+
       </content-section>
 
       <!-- Gallerie Teaser -->
       <content-section color="secondary-color">
+
+        <!-- Slider -->
         <gallery-teaser></gallery-teaser>
+
+        <!-- Beschreibung und Link zur Gallerie -->
         <b-container class="mt-5">
           <b-row class="justify-content-center">
             <p class="py-2 white-font"> Weitere Bilder finden Sie in unserer Gallerie. </p>
@@ -78,34 +88,36 @@
       <!-- Calendar Section -->
       <content-section color="grey-section-color">
         <b-row>
+
+          <!-- Beschreibung und Legende -->
           <b-col md="6" class="p-4 pb-5 pt-4">
             <h3 class="primetext t-left">Vereinstermine</h3>
-            <p class="py-2 px-0 ptext t-left"> Bevorstehende Veranstaltungen für Hauptverein, Abteilung, BVS und Lehrgänge. </p>
+            <p class="py-2 px-0 p-font t-left"> Bevorstehende Veranstaltungen für Hauptverein, Abteilung, BVS und Lehrgänge. </p>
             <b-row class="m-0 p-0 pt-1">
               <b-col cols="auto">
-                <legende-item color="li-green" label="Abteilung"></legende-item>
+                <legende-item color="secondary-color" label="Abteilung"></legende-item>
               </b-col>
               <b-col cols="auto">
-                <legende-item color="li-orange" label="BVS"></legende-item>
+                <legende-item color="prime-color" label="BVS"></legende-item>
               </b-col>
               <b-col cols="auto">
-                <legende-item
-                  class="p-0 mb-3"
-                  color="li-purple"
-                  label="Hauptverein"
-                ></legende-item>
+                <legende-item color="bordered-point" label="Hauptverein" class="p-0 mb-3" ></legende-item>
               </b-col>
             </b-row>
           </b-col>
+
+          <!-- Calendar -->
           <b-col md="6">
             <v-calendar
               class="shadow rounded border-0 calendar"
               :attributes="attributes"
             ></v-calendar>
           </b-col>
+
         </b-row>
       </content-section>
 
+      <!-- Footer Component -->
       <c-footer color="grey-section-color"></c-footer>
     </div>
   </div>
@@ -214,11 +226,7 @@ export default {
 </script>
 
 <style>
-.ov-h {
-  overflow: hidden;
-}
-
-.home {
+.home-content {
   width: 100%;
   height: 100%;
   position: relative;
@@ -287,10 +295,6 @@ export default {
   color: #32325d !important;
 }
 
-.ptext {
-  color: #525f7f !important;
-}
-
 .white-font {
   color: #fff;
 }
@@ -304,18 +308,6 @@ export default {
   height: 20px;
   width: 20px;
   margin: 5px 5px 5px 5px;
-}
-
-.cv-1 {
-  background-color: #5e72e4;
-}
-
-.cv-2 {
-  background-color: #525f7f;
-}
-
-.cv-3 {
-  background-color: #fb7f3f;
 }
 
 .section-icon {

@@ -8,12 +8,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
+  /* main colors */
   --primaryColor: #fb7f3f;
   --secondaryColor: #01324c;
   --greySectionColor: #f4f5f7;
+  --pTextColor: #525f7f;
 
+  /* footer colors */
   --footerTextColor: #8898aa;
   --footerTextHoverColor: #525f7f;
+
+  /* legend item colors */
+  --legendItemTextColor: #525f7f;
 }
 
 html,
@@ -36,7 +42,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*   main color classes   */
+/* main color classes */
 .prime-color {
   background-color: var(--primaryColor) !important;
 }
@@ -53,15 +59,23 @@ body {
   color: var(--secondaryColor) !important;
 }
 
-/*   additional section colors   */
+.p-font {
+  color: var(--pTextColor) !important;
+}
+
+/* additional section colors */
 .grey-section-color {
   background-color: var(--greySectionColor);
 }
 
-/*   often needed classes   */
+/* often needed classes */
 .center-children {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.overflow-h {
+  overflow: hidden;
 }
 </style>
