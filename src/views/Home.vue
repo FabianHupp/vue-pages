@@ -48,7 +48,7 @@
         <!-- Beschreibung und Link zur Gallerie -->
         <b-container class="mt-5">
           <b-row class="justify-content-center">
-            <p class="py-2 white-font"> Weitere Bilder finden Sie in unserer Gallerie. </p>
+            <p class="py-2 white-font"> Unsere Bilder finden Sie in der Gallerie. </p>
             <custom-button 
               text="Gallerie"
               bgColor="prime-color"
@@ -102,7 +102,7 @@ import ContentSection from "../components/ContentSection.vue";
 import CustomButton from "../components/CustomButton.vue";
 import LegendeItem from "../components/LegendeItem.vue";
 import Footer from "../components/Footer.vue";
-import GalleryTeaser from "../components/GalleryTeaser.vue";
+import GalleryTeaser from "../components/Swiper.vue";
 import HomeHeader from "../components/HomeHeader.vue";
 import Navigation from "../components/Navigation.vue";
 
@@ -115,7 +115,7 @@ export default {
     "c-footer": Footer,
     "gallery-teaser": GalleryTeaser,
     "home-header": HomeHeader,
-    navigation: Navigation,
+    navigation: Navigation
   },
   data() {
     const termine = [

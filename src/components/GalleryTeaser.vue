@@ -103,7 +103,7 @@ body {
       align-items:stretch;
       overflow:hidden;
 
-      min-width:100%;
+      min-width:100%;   
       
       height:480px;
       
