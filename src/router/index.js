@@ -16,9 +16,9 @@ const routes = [
     component: () => import("../views/About.vue"),
   },
   {
-    path: "/galerie",
-    name: "Galerie",
-    component: () => import("../views/Galerie.vue"),
+    path: "/gallerie",
+    name: "Gallerie",
+    component: () => import("../views/Gallerie.vue"),
   },
   {
     path: "/datenschutz",

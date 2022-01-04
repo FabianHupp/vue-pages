@@ -1,7 +1,14 @@
 <template>
-  <div class="home" ref="screen">
+  <div ref="gallerie">
+
+    <!-- Navigation -->
     <navigation></navigation>
-    <div class="main-content">Gallerie</div>
+
+    <!-- Main Body Content -->
+    <div class="gallerie-content overflow-h">
+      Gallerie
+    </div>
+
   </div>
 </template>
 
@@ -9,7 +16,7 @@
 import Navigation from "../components/Navigation.vue";
 
 export default {
-  name: "Galerie",
+  name: "Gallerie",
   components: {
     Navigation,
   },
@@ -32,18 +39,12 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  height: 300%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.main-content {
-  text-align: left;
-  position: relative;
-  padding: 0 0 0 250px;
+.gallerie-content {
   width: 100%;
   height: 100%;
+  position: relative;
+  top: 56px;
+  margin: 0 0 0 0;
+  padding: 0;
 }
 </style>

@@ -41,11 +41,39 @@
 
       <!-- Gallerie Teaser -->
       <content-section color="secondary-color">
+        <b-row>
 
-        <!-- Slider -->
+          <!-- Gallery Teaser -->
+          <b-col md="6" class="primary-color ">
+            <b-card>
+            </b-card>
+          </b-col>
+
+          <!-- Calendar -->
+          <b-col md="6" class="p-4 pb-5 pt-4">
+            <h3 class="white-font text-left">Lust auf Basketball?</h3>
+            <p class="pt-2 px-0 white-font text-left"> Wir sind immer auf der Suche nach neuen Mitgliedern.</p>
+            <p class=" px-0 white-font text-left"> Bei Interesse können Sie gerne zu unseren Trainingszeiten vorbeikommen oder kontaktieren Sie unsere Trainer per Mail.</p>
+            <custom-button
+              text="Spielpläne BVS"
+              bgColor="prime-color"
+              textColor="white-font"
+              icon="clipboard-data"
+              link="https://www.basketball-bund.net/index.jsp?Action=100&Verband=9"
+            ></custom-button>
+          </b-col>
+
+
+        </b-row>
+      </content-section>
+
+
+      
+      <!-- Gallerie Teaser -->
+      <!-- <content-section color="primary-color">
+
         <gallery-teaser></gallery-teaser>
 
-        <!-- Beschreibung und Link zur Gallerie -->
         <b-container class="mt-5">
           <b-row class="justify-content-center">
             <p class="py-2 white-font"> Unsere Bilder finden Sie in der Gallerie. </p>
@@ -57,7 +85,7 @@
             ></custom-button>
           </b-row>
         </b-container>
-      </content-section>
+      </content-section> -->
 
       <!-- Calendar Section -->
       <content-section color="grey-section-color">
@@ -99,12 +127,12 @@
 
 <script>
 import ContentSection from "../components/ContentSection.vue";
+import Navigation from "../components/Navigation.vue";
+import HomeHeader from "../components/HomeHeader.vue";
 import CustomButton from "../components/CustomButton.vue";
+//import GalleryTeaser from "../components/Swiper.vue";
 import LegendeItem from "../components/LegendeItem.vue";
 import Footer from "../components/Footer.vue";
-import GalleryTeaser from "../components/Swiper.vue";
-import HomeHeader from "../components/HomeHeader.vue";
-import Navigation from "../components/Navigation.vue";
 
 export default {
   name: "Home",
@@ -113,7 +141,7 @@ export default {
     "custom-button": CustomButton,
     "legende-item": LegendeItem,
     "c-footer": Footer,
-    "gallery-teaser": GalleryTeaser,
+    //"gallery-teaser": GalleryTeaser,
     "home-header": HomeHeader,
     navigation: Navigation
   },
@@ -122,28 +150,28 @@ export default {
       {
         description: "Mitgliederversammlung - 18:00-20:00",
         isComplete: false,
-        dates: new Date("December 4, 2021"),
+        dates: new Date("Januar 4, 2022"),
         color: "#01324c",
         fill: "solid",
       },
       {
         description: "Mitgliederversammlung - 18:00-20:00",
         isComplete: false,
-        dates: new Date("December 14, 2021"),
+        dates: new Date("Januar 14, 2022"),
         color: "#dd6b20",
         fill: "solid",
       },
       {
         description: "Mitgliederversammlung - 18:00-20:00",
         isComplete: false,
-        dates: new Date("December 22, 2021"),
+        dates: new Date("Januar 22, 2022"),
         color: "#dd6b20",
         fill: "solid",
       },
       {
         description: "Mitgliederversammlung - 18:00-20:00",
         isComplete: false,
-        dates: new Date("December 26, 2021"),
+        dates: new Date("Januar 26, 2022"),
         color: "#fff",
         fill: "outline",
         outlineColor: "#01324c",

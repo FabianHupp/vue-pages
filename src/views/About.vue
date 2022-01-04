@@ -42,6 +42,7 @@ export default {
 .main-content {
   text-align: left;
   position: relative;
+  margin-top: 56px;
   padding: 0 0 0 250px;
   width: 100%;
   height: 100%;

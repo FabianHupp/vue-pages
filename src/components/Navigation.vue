@@ -11,16 +11,16 @@
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
               <b-navbar-nav class="ms-auto">
-                <b-nav-item class="item" href="#">Home</b-nav-item>
-                <b-nav-item class="item" href="#">Training</b-nav-item>
-                <b-nav-item class="item" href="#">Mannschaften</b-nav-item>
-                <b-nav-item class="item" href="#">Gallerie</b-nav-item>
-                <b-nav-item class="item" href="#">Kontakt</b-nav-item>
+                <b-nav-item class="item" to="/">Home</b-nav-item>
+                <b-nav-item class="item" to="/training">Training</b-nav-item>
+                <b-nav-item class="item" to="/mannschaften">Mannschaften</b-nav-item>
+                <b-nav-item class="item" to="/gallerie">Gallerie</b-nav-item>
+                <b-nav-item class="item" to="/kontakt">Kontakt</b-nav-item>
                 <b-nav-item-dropdown class="item" ref="dropdown" text="Sonstiges" right>
-                  <b-dropdown-item class="sub-item" href="#">Download</b-dropdown-item>
-                  <b-dropdown-item class="sub-item" href="#">Spielpläne BVS</b-dropdown-item>
-                  <b-dropdown-item class="sub-item" href="#">Datenschutz</b-dropdown-item>
-                  <b-dropdown-item class="sub-item" href="#">Impressum</b-dropdown-item>
+                  <b-dropdown-item class="sub-item" to="/downloads">Downloads</b-dropdown-item>
+                  <b-dropdown-item class="sub-item" href="https://www.basketball-bund.net/index.jsp?Action=100&Verband=9" target="_blank">Spielpläne BVS</b-dropdown-item>
+                  <b-dropdown-item class="sub-item" to="/datenschutz">Datenschutz</b-dropdown-item>
+                  <b-dropdown-item class="sub-item" to="/impressum">Impressum</b-dropdown-item>
                 </b-nav-item-dropdown>
               </b-navbar-nav>
             </b-collapse>

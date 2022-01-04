@@ -51,6 +51,7 @@
 .logo-text {
   position: relative;
   top: 2px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .header h1 {
